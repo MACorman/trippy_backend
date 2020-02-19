@@ -1,0 +1,2 @@
+class DestinationSchedule < ApplicationRecord
+end

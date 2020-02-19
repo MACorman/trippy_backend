@@ -1,0 +1,2 @@
+class DestinationSchedulesController < ApplicationController
+end

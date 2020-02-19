@@ -1,3 +1,5 @@
 class DestinationScheduleSerializer < ActiveModel::Serializer
-  attributes :id
+  belongs_to :destination 
+  belongs_to :schedule 
+  attributes :id, :destination_id, :schedule_id
 end

@@ -1,3 +1,6 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id
+  has_many :user_schedules
+  has_many :schedules, through: :user_schedules
+  has_many :destinations, through: :schedules
+  attributes :id, :username, :password, :image
 end

@@ -23,7 +23,7 @@ class SchedulesController < ApplicationController
 
     private
     def schedule_params
-        params.require(:schedule).permit(:name, :location)
+        params.require(:schedule).permit(:name, :location, :date)
     end
 
 end

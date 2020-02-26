@@ -17,12 +17,12 @@ DestinationSchedule.destroy_all
 u1 = User.create(username: "Miles", password: "123", image: "https://hookagency.com/wp-content/uploads/2017/07/shitty-stock-photos.jpg")
 u2 = User.create(username: "Kelly", password: "123", image: "https://www.kut.org/sites/kut/files/styles/medium/public/201308/AISD_New_Hires_Packet-001_0.jpg")
 
-s1 = Schedule.create(name: "Capital Tour", location: "Wasington DC")
-s2 = Schedule.create(name: "Pairs Vacation", location: "Paris")
+s1 = Schedule.create(name: "Capital Tour", location: "Wasington DC", date: Date.strptime('03-02-2001', '%m-%d-%Y'))
+s2 = Schedule.create(name: "Pairs Vacation", location: "Paris", date: Date.strptime('03-07-2001', '%m-%d-%Y'))
 
-d1 = Destination.create(name: "Lincoln Memorial", address: "2 Lincoln Memorial Cir NW, Washington, DC 20037", category: "Tourist Attraction")
-d2 = Destination.create(name: "The Dabney", address: "122 Blagden Alley NW, Washington, DC 20001", category: "restaurant")
-d3 = Destination.create(name: "Eiffel Tower", address: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris", category: "Tourist Attraction")
+d1 = Destination.create(name: "Lincoln Memorial", address: "2 Lincoln Memorial Cir NW, Washington, DC 20037", category: "Tourist Attraction", time: Time.local(2001,"mar",2,20,15,1))
+d2 = Destination.create(name: "The Dabney", address: "122 Blagden Alley NW, Washington, DC 20001", category: "restaurant", time: Time.local(2001,"mar",2,22,15,1))
+d3 = Destination.create(name: "Eiffel Tower", address: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris", category: "Tourist Attraction", time: Time.local(2001,"mar",7,20,15,1))
 
 UserSchedule.create(user_id: u1.id, schedule_id: s1.id)
 UserSchedule.create(user_id: u2.id, schedule_id: s2.id)
